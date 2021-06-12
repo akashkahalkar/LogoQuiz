@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuizViewController" customModule="LogoQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hab-e7-OW7">
+                                <rect key="frame" x="176" y="68" width="62.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your answer here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAX-0O-Mw4">
+                                <rect key="frame" x="72.5" y="477" width="269" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-8m-peT">
+                                <rect key="frame" x="72.5" y="540.5" width="269" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="checkButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9jU-CO-EbH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="70C-b3-UR0">
+                                <rect key="frame" x="41.5" y="122" width="331" height="331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="70C-b3-UR0" secondAttribute="height" multiplier="1:1" id="JDu-8W-4vr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vbu-8m-peT" firstAttribute="trailing" secondItem="XAX-0O-Mw4" secondAttribute="trailing" id="66F-Sx-40K"/>
+                            <constraint firstItem="70C-b3-UR0" firstAttribute="top" secondItem="hab-e7-OW7" secondAttribute="bottom" constant="24" id="JId-Cj-meH"/>
+                            <constraint firstItem="hab-e7-OW7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="N9B-sF-NuN"/>
+                            <constraint firstItem="hab-e7-OW7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OV3-bX-yHs"/>
+                            <constraint firstItem="XAX-0O-Mw4" firstAttribute="top" secondItem="70C-b3-UR0" secondAttribute="bottom" constant="24" id="WHb-r3-KLo"/>
+                            <constraint firstItem="70C-b3-UR0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ZwA-hP-H09"/>
+                            <constraint firstItem="Vbu-8m-peT" firstAttribute="leading" secondItem="XAX-0O-Mw4" secondAttribute="leading" id="hey-1T-pNu"/>
+                            <constraint firstItem="70C-b3-UR0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qcS-aq-ht0"/>
+                            <constraint firstItem="Vbu-8m-peT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r5i-J1-6Ut"/>
+                            <constraint firstItem="Vbu-8m-peT" firstAttribute="top" secondItem="XAX-0O-Mw4" secondAttribute="bottom" constant="24" id="wlO-AZ-V2C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerInputLabel" destination="XAX-0O-Mw4" id="bi7-94-vqf"/>
+                        <outlet property="logoImageView" destination="70C-b3-UR0" id="kQ1-TZ-OdL"/>
+                        <outlet property="scoreLabel" destination="hab-e7-OW7" id="XIT-As-n4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78.260869565217391" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
